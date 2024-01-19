@@ -1,6 +1,9 @@
-const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+dotenv.config()
 
-mongoose.connect('mongodb+srv://meankitmishra10:jJJxymuKb9DzTV15@cluster0.xcsxd55.mongodb.net/user_app_new')
+const mongoose = require('mongoose')        
+
+mongoose.connect(process.env.DATABASE_URL)
 
 const User = mongoose.model('Users', {username: String, password: String, name: String})
 
