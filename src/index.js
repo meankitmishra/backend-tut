@@ -9,10 +9,10 @@ import {app} from "./app.js"
 
 import connectDB from "./db/index.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
-const envPath = resolve(__dirname,"../.env")
+const envPath = resolve("./.env")
 
 dotenv.config({
     path: envPath
